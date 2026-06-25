@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>约瑟夫·德拉索恩斯 - 个人人物主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #cce0fc; /* 严格匹配原图浅淡天蓝色背景 */
+            color: #000000;
+        }
+        /* 顶部全屏横幅Banner */
+        .top-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .top-banner img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        /* 通用区块内边距 */
+        .container {
+            padding: 42px 36px;
+        }
+        /* 区块标题样式：人物介绍 / 爱好 / 人物相册 */
+        .block-title {
+            font-size: 46px;
+            font-weight: normal;
+            margin-bottom: 26px;
+        }
+        /* 人物介绍 左图右文字布局 */
+        .intro-wrap {
+            display: flex;
+            align-items: flex-start;
+            gap: 44px;
+        }
+        .intro-avatar {
+            width: 150px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        .intro-avatar img {
+            width: 100%;
+            display: block;
+        }
+        .intro-desc {
+            font-size: 34px;
+            padding-top: 12px;
+            line-height: 1.7;
+        }
+        /* 爱好区域文字 */
+        .hobby-text {
+            font-size: 36px;
+            line-height: 2;
+        }
+        /* 相册三图横向布局 */
+        .album-row {
+            display: flex;
+            gap: 22px;
+        }
+        .album-item {
+            flex: 1;
+        }
+        .album-item img {
+            width: 100%;
+            display: block;
+        }
+        .album-desc {
+            margin-top: 16px;
+            font-size: 24px;
+            color: #222;
+        }
+        /* 移动端适配：手机竖排 */
+        @media screen and (max-width:768px) {
+            .intro-wrap {
+                flex-direction: column;
+            }
+            .album-row {
+                flex-direction: column;
+            }
+            .block-title {
+                font-size: 32px;
+            }
+            .intro-desc, .hobby-text {
+                font-size: 24px;
+            }
+            .container {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部大图Banner -->
+    <div class="top-banner">
+        <img src="./images/img1.jpg" alt="约瑟夫氛围感主视觉">
+    </div>
+
+    <!-- 第一区块：人物介绍 -->
+    <div class="container">
+        <h2 class="block-title">人物介绍</h2>
+        <div class="intro-wrap">
+            <div class="intro-avatar">
+                <img src="./images/img2.jpg" alt="约瑟夫正装立绘">
+            </div>
+            <div class="intro-desc">
+                我是约瑟夫·德拉索恩斯，曾是当地受人尊敬的乡绅，富有、举止优雅并拥有迷人的异国口音，人们乐意为这位老绅士的个人爱好充当模特。我的兴趣爱好：古典银版人像摄影、复古油画创作、西洋击剑、灵魂学研究、欧式贵族服饰美学。
+                <br><br>
+                出身法国德拉索恩斯贵族，大革命后流亡英格兰，因双胞胎弟弟克劳德离世沉溺于留存永恒的影像。画笔无法留住鲜活生命，而摄影似乎是唯一的救赎。随着我的摄影作品日渐增多，村庄里的居民却在不断消失——快门定格的，从来不止是容貌。
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二区块：爱好 -->
+    <div class="container">
+        <h2 class="block-title">爱好</h2>
+        <div class="hobby-text">
+            喜欢：秋日、古董银制相机、复古肖像人像、暗房显影工艺、古典油画速写、西洋剑术、精致焦糖甜点、欧式刺绣纹样<br>
+            厌恶：潮湿水汽、燥热夏季、褪色模糊的影像、转瞬即逝的人与事物<br>
+            擅长：人像肖像绘制、银版摄影、古典贵族礼仪、光影氛围把控、击剑
+        </div>
+    </div>
+
+    <!-- 第三区块：人物相册 -->
+    <div class="container">
+        <h2 class="block-title">人物相册</h2>
+        <div class="album-row">
+            <div class="album-item">
+                <img src="./images/img1.jpg" alt="约瑟夫暗调氛围感原画">
+            </div>
+            <div class="album-item">
+                <img src="./images/img3.jpg" alt="约瑟夫眼镜斯文正装形象">
+            </div>
+            <div class="album-item">
+                <img src="./images/img4.jpg" alt="约瑟夫Q版蛋糕衍生图">
+            </div>
+        </div>
+        <p class="album-desc">相册收录本人不同风格形象，包含氛围感肖像、正装日常、Q版萌系衍生，完整展现身为贵族摄影师的气质与执念。</p>
+    </div>
+</body>
+</html>
